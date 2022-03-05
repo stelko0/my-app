@@ -1,0 +1,39 @@
+D:\Дипломна работа\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Дипломна работа\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Дипломна работа\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Дипломна работа\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\Дипломна работа\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Дипломна работа\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Дипломна работа\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Дипломна работа\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Дипломна работа\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\Дипломна работа\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\Дипломна работа\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.About.resources
+C:\Users\PC\Desktop\my-app-master\InventoryManager\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\PC\Desktop\my-app-master\InventoryManager\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\PC\Desktop\my-app-master\InventoryManager\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\PC\Desktop\my-app-master\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\my-app-master\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.About.resources
+C:\Users\PC\Desktop\my-app-master\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\PC\Desktop\my-app-master\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\my-app-master\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\my-app-master\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\PC\Desktop\my-app-master\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\PC\Desktop\my-app-master\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\PC\Desktop\my-app-master\InventoryManager\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PC\Desktop\my-app-master\InventoryManager\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\PC\Desktop\my-app-master\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\Дипломен проект\InventoryManager\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Дипломен проект\InventoryManager\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Дипломен проект\InventoryManager\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Дипломен проект\InventoryManager\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
+D:\Дипломен проект\InventoryManager\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
+D:\Дипломен проект\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\Дипломен проект\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\Дипломен проект\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.About.resources
+D:\Дипломен проект\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Дипломен проект\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Дипломен проект\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Дипломен проект\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\Дипломен проект\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Дипломен проект\InventoryManager\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
