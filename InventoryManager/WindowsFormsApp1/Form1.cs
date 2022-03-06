@@ -19,13 +19,18 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         private SaveFileDialog sfd;
+        private OpenFileDialog ofd;
 
+        private String filePath = "";
+        private String fileContent = "";
        
         public Form1()
         {
+           
             InitializeComponent();
 
             sfd = new SaveFileDialog();
+            ofd = new OpenFileDialog();
 
             // Забранява на потребителя да оразмерява прозореца на програмата
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -34,6 +39,7 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             listViews();
         }
 
@@ -300,10 +306,7 @@ namespace WindowsFormsApp1
             sfd.Filter = "Json files (*.json) | *.json";
             sfd.FilterIndex = 2;
             sfd.Title = "Save elements";
-            if (sfd.ShowDialog() == DialogResult.OK)
-            {
-                filePath = sfd.FileName;
-            }
+            
             sfd.ShowDialog();
         }
 
@@ -321,10 +324,48 @@ namespace WindowsFormsApp1
                 listViews();
 
             }
-
-
+            
+        }
 
             
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ofd.InitialDirectory = "::{20D04FE0-3AEA-1069-A2D8-08002B30309D}";
+            ofd.Filter = "Json files (*.json) | *.json";
+            ofd.FilterIndex = 2;
+            ofd.Title = "Open elements";
+            ofd.ShowDialog();
+            filePath = ofd.FileName;
+            var fileStream = ofd.OpenFile();
+
+            using (StreamReader reader = new StreamReader(fileStream))
+            {
+                fileContent = reader.ReadToEnd();
+                List<Elements> items = JsonConvert.DeserializeObject<List<Elements>>(fileContent);
+                foreach (var element in items)
+                {
+                    string[] row = { element.Name, element.Amount, element.Date, element.Unit };
+                    var listViewItem = new ListViewItem(row);
+                    listView1.Items.Add(listViewItem);
+                    // Console.WriteLine(element.Name);
+                    // Console.WriteLine(element.Amount);
+                    // Console.WriteLine(element.Date);
+                    // Console.WriteLine(element.Unit);
+                    // Console.WriteLine("===========");
+
+
+
+
+
+
+                    //Name = itemRow.SubItems[0].Text,
+                    // Amount = itemRow.SubItems[1].Text,
+                    // Date = itemRow.SubItems[2].Text,
+                    // Unit = itemRow.SubItems[3].Text,
+                }
+
+
+            }
         }
     }
 }
