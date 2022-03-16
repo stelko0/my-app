@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    class ElementPropertycs
+    class ListData
     {
-        public string Name { get; set; }
-        public string Value { get; set; }
+        public string Element { get; set; }
+        public string Property { get; set; }
     }
 }

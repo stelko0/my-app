@@ -1,0 +1,36 @@
+[
+  [
+    {
+      "Name": "Battery",
+      "Amount": "12",
+      "Date": "08-03-2022",
+      "Unit": "V"
+    },
+    {
+      "Name": "Resistor 220",
+      "Amount": "52",
+      "Date": "08-03-2022",
+      "Unit": "OM"
+    },
+    {
+      "Name": "Speaker",
+      "Amount": "52",
+      "Date": "08-03-2022",
+      "Unit": "W"
+    }
+  ],
+  [
+    {
+      "Name": "Watt",
+      "Value": "W"
+    },
+    {
+      "Name": "Omh",
+      "Value": "Ω"
+    },
+    {
+      "Name": "Volt",
+      "Value": "V"
+    }
+  ]
+]

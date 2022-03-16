@@ -276,9 +276,9 @@ namespace WindowsFormsApp1
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string fileName = "firstSave.json";
-            string jsonData = System.IO.File.ReadAllText(fileName);
-
+            var jsonData = string.Empty;
             var elementsList = new List<Elements>();
+            var ElementsProp = new List<ElementProperty>();
 
             foreach (ListViewItem itemRow in listView1.Items)
             {
@@ -294,7 +294,25 @@ namespace WindowsFormsApp1
                 jsonData = JsonConvert.SerializeObject(elementsList, Formatting.Indented);
                 File.WriteAllText(fileName, jsonData);
             }
+            foreach(ListViewItem itemRow in listView2.Items)
+            {
+                ElementsProp.Add(new ElementProperty()
+                {
+                    Name = itemRow.SubItems[0].Text,
+                    Value = itemRow.SubItems[1].Text
+
+                });
+            };
+            /// баси тъптоо
+            var list = new { };
+            var saveData = new[] { list }.ToList();
+            saveData.Add(new ListData()
+            {
+                Element = elementsList,
+                Property = ElementsProp
+            });
         }
+
         // Запазване като
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -306,10 +324,29 @@ namespace WindowsFormsApp1
             sfd.Filter = "Json files (*.json) | *.json";
             sfd.FilterIndex = 2;
             sfd.Title = "Save elements";
-            
-            sfd.ShowDialog();
-        }
 
+            sfd.ShowDialog();
+
+            if (sfd.FileName != "")
+            {
+                var jsonData = string.Empty;
+                var elementsList = new List<Elements>();
+                foreach (ListViewItem itemRow in listView1.Items)
+                {
+                    elementsList.Add(new Elements()
+                    {
+                        Name = itemRow.SubItems[0].Text,
+                        Amount = itemRow.SubItems[1].Text,
+                        Date = itemRow.SubItems[2].Text,
+                        Unit = itemRow.SubItems[3].Text,
+                    });
+
+
+                    jsonData = JsonConvert.SerializeObject(elementsList, Formatting.Indented);
+                    File.WriteAllText(sfd.FileName, jsonData);
+                }
+            }
+        }
 
         // Изчистване
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
@@ -347,24 +384,7 @@ namespace WindowsFormsApp1
                     string[] row = { element.Name, element.Amount, element.Date, element.Unit };
                     var listViewItem = new ListViewItem(row);
                     listView1.Items.Add(listViewItem);
-                    // Console.WriteLine(element.Name);
-                    // Console.WriteLine(element.Amount);
-                    // Console.WriteLine(element.Date);
-                    // Console.WriteLine(element.Unit);
-                    // Console.WriteLine("===========");
-
-
-
-
-
-
-                    //Name = itemRow.SubItems[0].Text,
-                    // Amount = itemRow.SubItems[1].Text,
-                    // Date = itemRow.SubItems[2].Text,
-                    // Unit = itemRow.SubItems[3].Text,
                 }
-
-
             }
         }
     }
