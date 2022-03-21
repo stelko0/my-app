@@ -226,7 +226,6 @@ namespace WindowsFormsApp1
         }
 
         
-        // Премахване на мерна единица
        
 
         // Запазване
@@ -267,8 +266,8 @@ namespace WindowsFormsApp1
         {
             try
             {
-            var fileContent = string.Empty;
-            var filePath = string.Empty;
+            string fileContent;
+            string filePath;
 
             // Задаваме локация къде да ни пусне (Този компютър / This PC)
             sfd.InitialDirectory = "::{20D04FE0-3AEA-1069-A2D8-08002B30309D}";
@@ -280,7 +279,7 @@ namespace WindowsFormsApp1
 
             if (sfd.FileName != "")
             {
-                var jsonData = string.Empty;
+                string jsonData;
                 var elementsList = new List<Elements>();
                 foreach (ListViewItem itemRow in listView1.Items)
                 {
@@ -308,7 +307,7 @@ namespace WindowsFormsApp1
         // Изчистване
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Are you sure you want to exit off the application", "Are you sure?", MessageBoxButtons.YesNo);
+            var result = MessageBox.Show("Сигурни ли сте, че искате да затворите склада?", "Сигурни ли сте?", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes) //Creates the yes function
             {
                 listView1.Clear();
