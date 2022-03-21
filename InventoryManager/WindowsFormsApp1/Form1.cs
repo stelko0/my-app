@@ -51,16 +51,15 @@ namespace WindowsFormsApp1
             listView1.Columns.Add("Име", 150);
             listView1.Columns.Add("Количество", 150);
             listView1.Columns.Add("Дата", 150);
-            listView1.Columns.Add("Мерна единица", 150);
             dateElement.Format = DateTimePickerFormat.Custom;
             dateElement.CustomFormat = "dd-MM-yyyy";
 
 
-            // Списък за всяка мерна единица
-            listView2.View = View.Details;
-            listView2.FullRowSelect = true;
-            listView2.Columns.Add("Мерна единица", 150);
-            listView2.Columns.Add("Символ", 100);
+            //Списък за всяка мерна единица
+            //listView2.View = View.Details;
+            //listView2.FullRowSelect = true;
+            //listView2.Columns.Add("Мерна единица", 150);
+            //listView2.Columns.Add("Символ", 100);
 
         }
 
@@ -87,13 +86,12 @@ namespace WindowsFormsApp1
             else
             {
                 string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
-                String[] row = { nameElement.Text, amountElement.Text, date, comboBox1.Text };
+                String[] row = { nameElement.Text, amountElement.Text, date  };
                 ListViewItem item = new ListViewItem(row);
 
                 listView1.Items.Add(item);
                 nameElement.Text = "";
                 amountElement.Text = "";
-                comboBox1.Text = ""; 
             }
         }
 
@@ -143,6 +141,7 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
         // Увеличаване на количеството
         private void increaseBtn_Click(object sender, EventArgs e)
         {
@@ -180,7 +179,7 @@ namespace WindowsFormsApp1
             var result = MessageBox.Show("Сигурни ли сте, че искате да затворите програмата? Това ще изтрие всичко, ако не сте го запазили!","ВНИМАНИЕ!!", MessageBoxButtons.YesNo);
             if(result == DialogResult.Yes)
             {
-            this.Close();
+                this.Close();
             }
         }
 
@@ -192,19 +191,18 @@ namespace WindowsFormsApp1
             String name = listView1.SelectedItems[0].SubItems[0].Text;
             String amount = listView1.SelectedItems[0].SubItems[1].Text;
             String date = listView1.SelectedItems[0].SubItems[2].Text;
-            String unit = listView1.SelectedItems[0].SubItems[3].Text;
 
 
             nameElement.Text = name;
             amountElement.Text = amount;
             dateElement.Text = date;
-            comboBox1.Text = unit;
         }
+
 
         // Актулизиране на елемент
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            if (unitName.Text != "" || amountElement.Text != "")
+            if (amountElement.Text != "")
             {
                 if (listView1.SelectedItems.Count > 0)
                 {
@@ -227,58 +225,22 @@ namespace WindowsFormsApp1
             }
         }
 
-        // Добавяне на мерна единица
-        private void addUnit_Click(object sender, EventArgs e)
-        {
-            if (unitName.Text == "" || unitSymbol.Text == "")
-            {
-                MessageBox.Show("Всички полета са задължителни!");
-                return;
-            }
-            else
-            {
-                String[] row = { unitName.Text, unitSymbol.Text };
-                ListViewItem item = new ListViewItem(row);
-
-                comboBox1.Items.Add(unitName.Text);
-                listView2.Items.Add(item);
-                unitName.Text = "";
-                unitSymbol.Text = "";
-
-            }
-
-        }
         
         // Премахване на мерна единица
-        private void removeUnitBtn_Click(object sender, EventArgs e)
-        {
-            if (listView2.SelectedItems.Count > 0)
-            {
-                listView2.Items.Cast<ListViewItem>().Where(T => T.Selected)
-                .Select(T => T.Index).ToList().ForEach(T => { comboBox1.Items.RemoveAt(T);
-                    listView2.Items.RemoveAt(T);
-
-                });
-                // listView2.Items.Cast<ListViewItem>().Where(T => T.Selected)
-                // .Select(T => T.Index).ToList().ForEach(T => comboBox1.Items.RemoveAt(T));
-
-
-                unitName.Text = "";
-                unitSymbol.Text = "";
-            }
-            else
-            {
-                MessageBox.Show("Първо изберете елемент!");
-            }
-        }
+       
 
         // Запазване
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string fileName = "firstSave.json";
-            var jsonData = string.Empty;
+            try
+            {
+
+            if (File.Exists(filePath) == true)
+            {
+
+            string jsonData;
+
             var elementsList = new List<Elements>();
-            var ElementsProp = new List<ElementProperty>();
 
             foreach (ListViewItem itemRow in listView1.Items)
             {
@@ -287,35 +249,24 @@ namespace WindowsFormsApp1
                     Name = itemRow.SubItems[0].Text,
                     Amount = itemRow.SubItems[1].Text,
                     Date = itemRow.SubItems[2].Text,
-                    Unit = itemRow.SubItems[3].Text,
                 });
-
-                
-                jsonData = JsonConvert.SerializeObject(elementsList, Formatting.Indented);
-                File.WriteAllText(fileName, jsonData);
             }
-            foreach(ListViewItem itemRow in listView2.Items)
+       
+                jsonData = JsonConvert.SerializeObject(elementsList, Formatting.Indented);
+                File.WriteAllText(filePath, jsonData);
+                MessageBox.Show("Файлът е запазен!");
+            }
+            } catch
             {
-                ElementsProp.Add(new ElementProperty()
-                {
-                    Name = itemRow.SubItems[0].Text,
-                    Value = itemRow.SubItems[1].Text
-
-                });
-            };
-            /// баси тъптоо
-            var list = new { };
-            var saveData = new[] { list }.ToList();
-            saveData.Add(new ListData()
-            {
-                Element = elementsList,
-                Property = ElementsProp
-            });
+                MessageBox.Show("Файлът не е запазен!");
+            }
         }
 
         // Запазване като
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
             var fileContent = string.Empty;
             var filePath = string.Empty;
 
@@ -338,13 +289,19 @@ namespace WindowsFormsApp1
                         Name = itemRow.SubItems[0].Text,
                         Amount = itemRow.SubItems[1].Text,
                         Date = itemRow.SubItems[2].Text,
-                        Unit = itemRow.SubItems[3].Text,
                     });
 
 
                     jsonData = JsonConvert.SerializeObject(elementsList, Formatting.Indented);
                     File.WriteAllText(sfd.FileName, jsonData);
                 }
+                    MessageBox.Show("Вашият файл е запазен!");
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Вашият файл не е запазен!");
             }
         }
 
@@ -355,10 +312,8 @@ namespace WindowsFormsApp1
             if (result == DialogResult.Yes) //Creates the yes function
             {
                 listView1.Clear();
-                listView2.Clear();
-                comboBox1.ResetText();
-                comboBox1.Items.Clear();
                 listViews();
+                filePath = "";
 
             }
             
@@ -381,7 +336,7 @@ namespace WindowsFormsApp1
                 List<Elements> items = JsonConvert.DeserializeObject<List<Elements>>(fileContent);
                 foreach (var element in items)
                 {
-                    string[] row = { element.Name, element.Amount, element.Date, element.Unit };
+                    string[] row = { element.Name, element.Amount, element.Date};
                     var listViewItem = new ListViewItem(row);
                     listView1.Items.Add(listViewItem);
                 }

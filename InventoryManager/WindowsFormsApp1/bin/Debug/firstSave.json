@@ -1,36 +1,17 @@
 [
-  [
-    {
-      "Name": "Battery",
-      "Amount": "12",
-      "Date": "08-03-2022",
-      "Unit": "V"
-    },
-    {
-      "Name": "Resistor 220",
-      "Amount": "52",
-      "Date": "08-03-2022",
-      "Unit": "OM"
-    },
-    {
-      "Name": "Speaker",
-      "Amount": "52",
-      "Date": "08-03-2022",
-      "Unit": "W"
-    }
-  ],
-  [
-    {
-      "Name": "Watt",
-      "Value": "W"
-    },
-    {
-      "Name": "Omh",
-      "Value": "Ω"
-    },
-    {
-      "Name": "Volt",
-      "Value": "V"
-    }
-  ]
+  {
+    "Name": "Battery",
+    "Amount": "111",
+    "Date": "21-03-2022"
+  },
+  {
+    "Name": "Resistor 220K",
+    "Amount": "22",
+    "Date": "21-03-2022"
+  },
+  {
+    "Name": "Tirmistor",
+    "Amount": "2521",
+    "Date": "21-03-2022"
+  }
 ]

@@ -11,6 +11,5 @@ namespace WindowsFormsApp1
         public string Name { get; set; }
         public string Amount { get; set; }
         public string Date { get; set; }
-        public string Unit { get; set; }
     }
 }

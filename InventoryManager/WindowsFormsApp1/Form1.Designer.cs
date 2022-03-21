@@ -51,14 +51,6 @@ namespace WindowsFormsApp1
             this.updateBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dateElement = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.unitName = new System.Windows.Forms.TextBox();
-            this.unitSymbol = new System.Windows.Forms.TextBox();
-            this.addUnit = new System.Windows.Forms.Button();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.removeUnitBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +61,7 @@ namespace WindowsFormsApp1
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1293, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(932, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -89,14 +81,14 @@ namespace WindowsFormsApp1
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -104,7 +96,7 @@ namespace WindowsFormsApp1
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
             this.saveAsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveAsToolStripMenuItem.Text = "Save as";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
@@ -112,7 +104,7 @@ namespace WindowsFormsApp1
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
             this.loadToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
@@ -120,7 +112,7 @@ namespace WindowsFormsApp1
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -247,7 +239,7 @@ namespace WindowsFormsApp1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(644, 301);
+            this.label3.Location = new System.Drawing.Point(644, 263);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 20);
             this.label3.TabIndex = 15;
@@ -256,101 +248,16 @@ namespace WindowsFormsApp1
             // dateElement
             // 
             this.dateElement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateElement.Location = new System.Drawing.Point(648, 324);
+            this.dateElement.Location = new System.Drawing.Point(648, 286);
             this.dateElement.Name = "dateElement";
             this.dateElement.Size = new System.Drawing.Size(248, 26);
             this.dateElement.TabIndex = 16;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(648, 255);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(248, 28);
-            this.comboBox1.TabIndex = 18;
-            // 
-            // unitName
-            // 
-            this.unitName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.unitName.Location = new System.Drawing.Point(954, 90);
-            this.unitName.Name = "unitName";
-            this.unitName.Size = new System.Drawing.Size(319, 26);
-            this.unitName.TabIndex = 19;
-            // 
-            // unitSymbol
-            // 
-            this.unitSymbol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.unitSymbol.Location = new System.Drawing.Point(954, 161);
-            this.unitSymbol.Name = "unitSymbol";
-            this.unitSymbol.Size = new System.Drawing.Size(319, 26);
-            this.unitSymbol.TabIndex = 20;
-            // 
-            // addUnit
-            // 
-            this.addUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addUnit.Location = new System.Drawing.Point(954, 324);
-            this.addUnit.Name = "addUnit";
-            this.addUnit.Size = new System.Drawing.Size(319, 43);
-            this.addUnit.TabIndex = 21;
-            this.addUnit.Text = "Добавяне";
-            this.addUnit.UseVisualStyleBackColor = true;
-            this.addUnit.Click += new System.EventHandler(this.addUnit_Click);
-            // 
-            // listView2
-            // 
-            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(954, 200);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(319, 118);
-            this.listView2.TabIndex = 22;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(950, 67);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 20);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Име";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(950, 138);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 20);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Символ";
-            // 
-            // removeUnitBtn
-            // 
-            this.removeUnitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.removeUnitBtn.Location = new System.Drawing.Point(954, 372);
-            this.removeUnitBtn.Name = "removeUnitBtn";
-            this.removeUnitBtn.Size = new System.Drawing.Size(319, 43);
-            this.removeUnitBtn.TabIndex = 25;
-            this.removeUnitBtn.Text = "Премахване";
-            this.removeUnitBtn.UseVisualStyleBackColor = true;
-            this.removeUnitBtn.Click += new System.EventHandler(this.removeUnitBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1293, 548);
-            this.Controls.Add(this.removeUnitBtn);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.listView2);
-            this.Controls.Add(this.addUnit);
-            this.Controls.Add(this.unitSymbol);
-            this.Controls.Add(this.unitName);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(932, 477);
             this.Controls.Add(this.dateElement);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.updateBtn);
@@ -400,14 +307,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateElement;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox unitName;
-        private System.Windows.Forms.TextBox unitSymbol;
-        private System.Windows.Forms.Button addUnit;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button removeUnitBtn;
     }
 }
 
